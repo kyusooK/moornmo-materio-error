@@ -1,0 +1,234 @@
+---
+paths:
+  '/salesOrders/{id}/produce':
+    summary: produce operation on salesOrders
+    put:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  description: status of this Produce
+                  type: string
+            examples: null
+      parameters:
+        - name: id
+          description: Produce name
+          schema:
+            type: integer
+          in: path
+          required: true
+          examples: null
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalesOrder'
+              examples:
+                '1':
+                  value:
+                    id: 1
+                    salesOrderNumber: 1
+                    salesPerson: A string
+                    salesType: value
+                    companyId: value
+                    salesStatus: value
+                    salesItems: value
+          description: Produce Operation
+      operationId: Produce
+      summary: Produce
+      description: Produce
+  /salesOrders:
+    summary: Global operations on salesOrders
+    get:
+      tags:
+        - salesOrders
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SalesOrder'
+              examples:
+                salesOrders_json:
+                  value:
+                    - id: 1
+                      salesOrderNumber: 1
+                      salesPerson: A string
+                      salesType: value
+                      companyId: value
+                      salesStatus: value
+                      salesItems: value
+          description: Get list of salesOrders
+      operationId: GetSalesOrder
+      summary: Get list of salesOrders
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SalesOrder'
+            examples:
+              '1':
+                value:
+                  id: 1
+                  salesOrderNumber: 1
+                  salesPerson: A string
+                  salesType: value
+                  companyId: value
+                  salesStatus: value
+                  salesItems: value
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalesOrder'
+              examples:
+                '1':
+                  value:
+                    id: 1
+                    salesOrderNumber: 1
+                    salesPerson: A string
+                    salesType: value
+                    companyId: value
+                    salesStatus: value
+                    salesItems: value
+          description: Changed SalesOrder
+      operationId: Post SalesOrder
+      summary: Post SalesOrder
+  '/salesOrders/{id}':
+    summary: Specific operation on salesOrders
+    get:
+      parameters:
+        - examples:
+            '1':
+              value: 1
+          name: id
+          description: SalesOrder name
+          schema:
+            type: integer
+          in: path
+          required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalesOrder'
+              examples:
+                '1':
+                  value:
+                    id: 1
+                    salesOrderNumber: 1
+                    salesPerson: A string
+                    salesType: value
+                    companyId: value
+                    salesStatus: value
+                    salesItems: value
+          description: salesOrders with specified id
+      operationId: GetSalesOrderById
+      summary: Get SalesOrder by id
+      description: Get SalesOrder by id
+    patch:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SalesOrder'
+            examples:
+              '1':
+                value:
+                  id: 1
+                  salesOrderNumber: 1
+                  salesPerson: A string
+                  salesType: value
+                  companyId: value
+                  salesStatus: value
+                  salesItems: value
+        required: true
+      parameters:
+        - examples:
+            '1':
+              value: 1
+          name: id
+          description: SalesOrder name
+          schema:
+            type: integer
+          in: path
+          required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalesOrder'
+              examples:
+                '1':
+                  value:
+                    id: 1
+                    salesOrderNumber: 1
+                    salesPerson: A string
+                    salesType: value
+                    companyId: value
+                    salesStatus: value
+                    salesItems: value
+          description: Changed SalesOrder
+      operationId: PatchSalesOrder
+      summary: Patch existing SalesOrder
+    parameters:
+      - name: id
+        description: SalesOrder id
+        schema:
+          type: integer
+        in: path
+        required: true
+openapi: 3.0.2
+info:
+  title: SalesOrder
+  version: 0.0.1
+  description: API definition of salesOrder
+  contact:
+    name: creator's name
+    url: 'http://creator.homepage.address'
+    email: creator@creator.com
+  license:
+    name: MIT License
+    url: 'https://opensource.org/licenses/MIT'
+components:
+  schemas:
+    SalesOrder:
+      title: Root Type for SalesOrder
+      description: The root of the SalesOrder type's schema.
+      type: object
+      properties:
+        id:
+          description: id of this SalesOrder
+          type: integer
+        salesOrderNumber:
+          description: salesOrderNumber of this SalesOrder
+          type: integer
+        salesPerson:
+          description: salesPerson of this SalesOrder
+          type: string
+        salesType:
+          description: salesType of this SalesOrder
+          type: string
+        companyId:
+          description: companyId of this SalesOrder
+          type: string
+        salesStatus:
+          description: salesStatus of this SalesOrder
+          type: string
+        salesItems:
+          description: salesItems of this SalesOrder
+          type: string
+tags:
+  - name: SalesOrder
+    description: SalesOrder resource

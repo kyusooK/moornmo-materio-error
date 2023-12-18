@@ -1,0 +1,175 @@
+---
+openapi: 3.0.2
+info:
+  title: Product
+  version: 0.0.1
+  description: API definition of product
+  contact:
+    name: creator's name
+    url: 'http://creator.homepage.address'
+    email: creator@creator.com
+  license:
+    name: MIT License
+    url: 'https://opensource.org/licenses/MIT'
+paths:
+  /products:
+    summary: Global operations on products
+    get:
+      tags:
+        - products
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+              examples:
+                products_json:
+                  value:
+                    - id: 1
+                      name: A string
+                      code: A string
+                      spec: A string
+                      productStatus: value
+          description: Get list of products
+      operationId: GetProduct
+      summary: Get list of products
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+            examples:
+              '1':
+                value:
+                  id: 1
+                  name: A string
+                  code: A string
+                  spec: A string
+                  productStatus: value
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+              examples:
+                '1':
+                  value:
+                    id: 1
+                    name: A string
+                    code: A string
+                    spec: A string
+                    productStatus: value
+          description: Changed Product
+      operationId: Post Product
+      summary: Post Product
+  '/products/{id}':
+    summary: Specific operation on products
+    get:
+      parameters:
+        - examples:
+            '1':
+              value: 1
+          name: id
+          description: Product name
+          schema:
+            type: integer
+          in: path
+          required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+              examples:
+                '1':
+                  value:
+                    id: 1
+                    name: A string
+                    code: A string
+                    spec: A string
+                    productStatus: value
+          description: products with specified id
+      operationId: GetProductById
+      summary: Get Product by id
+      description: Get Product by id
+    patch:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+            examples:
+              '1':
+                value:
+                  id: 1
+                  name: A string
+                  code: A string
+                  spec: A string
+                  productStatus: value
+        required: true
+      parameters:
+        - examples:
+            '1':
+              value: 1
+          name: id
+          description: Product name
+          schema:
+            type: integer
+          in: path
+          required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+              examples:
+                '1':
+                  value:
+                    id: 1
+                    name: A string
+                    code: A string
+                    spec: A string
+                    productStatus: value
+          description: Changed Product
+      operationId: PatchProduct
+      summary: Patch existing Product
+    parameters:
+      - name: id
+        description: Product id
+        schema:
+          type: integer
+        in: path
+        required: true
+components:
+  schemas:
+    Product:
+      title: Root Type for Product
+      description: The root of the Product type's schema.
+      type: object
+      properties:
+        id:
+          description: id of this Product
+          type: integer
+        name:
+          description: name of this Product
+          type: string
+        code:
+          description: code of this Product
+          type: string
+        spec:
+          description: spec of this Product
+          type: string
+        productStatus:
+          description: productStatus of this Product
+          type: string
+tags:
+  - name: Product
+    description: Product resource
