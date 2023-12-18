@@ -29,7 +29,6 @@
                         <th>Name</th>
                         <th>Industry</th>
                         <th>FoundedDate</th>
-                        <th>ProductStatus</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,7 +37,6 @@
                             <td class="whitespace-nowrap" label="Name">{{ val.name }}</td>
                             <td class="whitespace-nowrap" label="Industry">{{ val.industry }}</td>
                             <td class="whitespace-nowrap" label="FoundedDate">{{ val.foundedDate }}</td>
-                            <td class="whitespace-nowrap" label="ProductStatus">{{ val.productStatus }}</td>
                             <Icon style="margin-top: 15px;" icon="mi:delete" @click="deleteRow(val)" />
                         </tr>
                     </tbody>
@@ -100,7 +98,6 @@
                             <String label="Name" v-model="selectedRow.name" :editMode="true"/>
                             <String label="Industry" v-model="selectedRow.industry" :editMode="true"/>
                             <Date label="FoundedDate" v-model="selectedRow.foundedDate" :editMode="true"/>
-                            <Status offline label="ProductStatus" v-model="selectedRow.productStatus" :editMode="true"/4>
                             <v-divider class="border-opacity-100 my-divider"></v-divider>
                             <v-layout row justify-end>
                                 <v-btn
@@ -126,7 +123,6 @@ import BaseGrid from '../base-ui/BaseGrid.vue'
 import Company from '../Company.vue'
 import String from '../primitives/String.vue'
 import Date from '../primitives/Date.vue'
-import Status from '../Status.vue'
 import CompanyQuery from '../CompanyQuery.vue'
 
 export default {
@@ -136,7 +132,6 @@ export default {
         Company,
         String,
         Date,
-        Status,
         CompanyQuery,
     },
     data: () => ({

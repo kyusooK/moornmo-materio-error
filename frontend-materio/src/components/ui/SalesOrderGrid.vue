@@ -114,9 +114,9 @@
                         <div>
                             <Number label="SalesOrderNumber" v-model="selectedRow.salesOrderNumber" :editMode="true"/>
                             <String label="SalesPerson" v-model="selectedRow.salesPerson" :editMode="true"/>
-                            <SalesType offline label="SalesType" v-model="selectedRow.salesType" :editMode="true"/4>
-                            <CompanyId offline label="CompanyId" v-model="selectedRow.companyId" :editMode="true"/4>
-                            <SalesStatus offline label="SalesStatus" v-model="selectedRow.salesStatus" :editMode="true"/4>
+                            <SalesType offline label="SalesType" v-model="selectedRow.salesType" :editMode="true"/>
+                            <CompanyId offline label="CompanyId" v-model="selectedRow.companyId" :editMode="true"/>
+                            <SalesStatus offline label="SalesStatus" v-model="selectedRow.salesStatus" :editMode="true"/>
                             <SalesItemDetailGrid label="SalesItems" offline v-model="selectedRow.salesItems" :editMode="true"/>
                             <v-divider class="border-opacity-100 my-divider"></v-divider>
                             <v-layout row justify-end>

@@ -14,7 +14,6 @@
             <div>
                 <Date label="FoundedDate" v-model="item.foundedDate" :editMode="editMode" @change="change" />
             </div>
-            <Status offline label="ProductStatus" v-model="item.productStatus" :editMode="false" :key="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>

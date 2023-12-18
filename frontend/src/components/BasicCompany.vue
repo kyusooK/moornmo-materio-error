@@ -19,7 +19,6 @@
             <String label="Name" v-model="value.name" :editMode="editMode" :inputUI="''"/>
             <String label="Industry" v-model="value.industry" :editMode="editMode" :inputUI="''"/>
             <Date label="FoundedDate" v-model="value.foundedDate" :editMode="editMode" :inputUI="''"/>
-            <Status offline label="ProductStatus" v-model="value.productStatus" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>

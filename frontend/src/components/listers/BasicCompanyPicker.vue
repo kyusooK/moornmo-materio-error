@@ -24,9 +24,6 @@
                             <v-list-item-subtitle>
                                 FoundedDate :  {{item.foundedDate }}
                             </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                ProductStatus :  {{item.productStatus }}
-                            </v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-action>
@@ -81,8 +78,6 @@
                     
                     
                     obj['nameField'] = this.list[val].name; 
-                    
-                    
                     
                     
                     

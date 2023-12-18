@@ -96,7 +96,7 @@
                     <v-card-text>
                         <div>
                             <Number label="Stock" v-model="selectedRow.stock" :editMode="true"/>
-                            <ProductId offline label="ProductId" v-model="selectedRow.productId" :editMode="true"/4>
+                            <ProductId offline label="ProductId" v-model="selectedRow.productId" :editMode="true"/>
                             <v-divider class="border-opacity-100 my-divider"></v-divider>
                             <v-layout row justify-end>
                                 <v-btn
