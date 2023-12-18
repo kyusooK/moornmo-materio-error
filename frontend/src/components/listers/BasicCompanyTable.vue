@@ -70,7 +70,6 @@
                     { text: "name", value: "name" },
                     { text: "industry", value: "industry" },
                     { text: "foundedDate", value: "foundedDate" },
-                    { text: "productStatus", value: "productStatus" },
                 ],
             company : [],
             newValue: {},
@@ -91,7 +90,6 @@
                 'name': '',
                 'industry': '',
                 'foundedDate': '2023-12-18',
-                'productStatus': '',
             }
         },
         methods: {

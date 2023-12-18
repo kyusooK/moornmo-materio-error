@@ -34,7 +34,7 @@ mvn spring-boot:run
 ## Test by API
 - basic
 ```
- http :8088/companies id="id" name="name" industry="industry" foundedDate="foundedDate" productStatus="productStatus" 
+ http :8088/companies id="id" name="name" industry="industry" foundedDate="foundedDate" 
  http :8088/products id="id" name="name" code="code" spec="spec" productStatus="productStatus" 
 ```
 - sales

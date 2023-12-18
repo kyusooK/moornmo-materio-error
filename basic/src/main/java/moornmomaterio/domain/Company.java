@@ -26,8 +26,6 @@ public class Company {
 
     private Date foundedDate;
 
-    private Status productStatus;
-
     @PostPersist
     public void onPostPersist() {
         CompanyCreated companyCreated = new CompanyCreated(this);

@@ -100,7 +100,7 @@
                             <String label="Name" v-model="selectedRow.name" :editMode="true"/>
                             <String label="Code" v-model="selectedRow.code" :editMode="true"/>
                             <String label="Spec" v-model="selectedRow.spec" :editMode="true"/>
-                            <ProductStatus offline label="ProductStatus" v-model="selectedRow.productStatus" :editMode="true"/4>
+                            <ProductStatus offline label="ProductStatus" v-model="selectedRow.productStatus" :editMode="true"/>
                             <v-divider class="border-opacity-100 my-divider"></v-divider>
                             <v-layout row justify-end>
                                 <v-btn

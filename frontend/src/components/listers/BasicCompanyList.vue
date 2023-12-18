@@ -44,7 +44,6 @@
                              Name 
                             
                             
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -52,7 +51,6 @@
                             [ Name :  {{data.name }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Industry :  {{data.industry }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ FoundedDate :  {{data.foundedDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ ProductStatus :  {{data.productStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -123,7 +121,6 @@
                 'name': '',
                 'industry': '',
                 'foundedDate': '2023-12-18',
-                'productStatus': '',
             }
         },
         methods: {

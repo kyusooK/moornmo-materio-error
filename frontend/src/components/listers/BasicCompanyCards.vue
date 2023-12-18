@@ -112,7 +112,6 @@
                 'name': '',
                 'industry': '',
                 'foundedDate': '2023-12-18',
-                'productStatus': '',
             }
         },
         methods:{
